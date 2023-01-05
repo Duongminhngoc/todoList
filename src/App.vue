@@ -76,23 +76,22 @@ export default {
   },
   methods: {
     checkAction(todoList) {
-      todoList.isActive = !todoList.isActive;
+      todoList.isActive = !todoList.isActive
     },
     removeHandle(todoList) {
-      this.todoLists = this.todoLists.filter((item) => item.id != todoList.id);
+      this.todoLists = this.todoLists.filter((item) => item.id != todoList.id)
     },
     addItemHandle() {
       if (this.value == "") {
-        return;
+        return
       }
-      let itemId = Math.floor(Math.random() * 1000) + 10;
+      let itemId = Math.floor(Math.random() * 1000) + 10
       this.todoLists.push({
         id: itemId,
         isActive: false,
         text: this.value,
       });
-      this.value = "";
-      console.log('fdfdf', this.todoLists);
+      this.value = ""
     },
   },
 };
